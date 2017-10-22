@@ -32,7 +32,7 @@ For Web browsers:
 ```html
 <script src="fav.text.escape.min.js"></script>
 <script>
-var escape = fav.text.escape;
+var escape = fav.text.escape.RegExp;
 escape('[@fav/text.escape]');  // => '\[@fav/text\.escape\]'
 </script>
 ```

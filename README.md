@@ -20,7 +20,7 @@ $ npm install --save @fav/text.escape
 
 ## Usage
 
-For Node.js, when installing `@fav/text.escape` from npm:
+For Node.js:
 
 ```js
 var escape = require('@fav/text.escape').RegExp;

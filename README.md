@@ -1,6 +1,6 @@
 # [@fav/text.escape][repo-url] [![NPM][npm-img]][npm-url] [![MIT License][mit-img]][mit-url] [![Build Status][travis-img]][travis-url] [![Build Status][appveyor-img]][appveyor-url] [![Coverage status][coverage-img]][coverage-url]
 
-Escape characters for various syntaxes and formats.
+Escapes characters for various syntaxes and formats.
 
 > "fav" is an abbreviation of "favorite" and also the acronym of "for all versions".
 > This package is intended to support all Node.js versions and many browsers as possible.
@@ -24,7 +24,8 @@ For Node.js:
 
 ```js
 var escape = require('@fav/text.escape').RegExp;
-escape('[@fav/text.escape]');  // => '\[@fav/text\.escape\]'
+escape('[@fav/text.escape]');  // => '\\[@fav/text\\.escape\\]'
+console.log(escape('[@fav/text.escape]')); // => \[@fav/text\.escape\]
 ```
 
 For Web browsers:
@@ -33,7 +34,8 @@ For Web browsers:
 <script src="fav.text.escape.min.js"></script>
 <script>
 var escape = fav.text.escape.RegExp;
-escape('[@fav/text.escape]');  // => '\[@fav/text\.escape\]'
+escape('[@fav/text.escape]');  // => '\\[@fav/text\\.escape\\]'
+console.log(escape('[@fav/text.escape]'));  // => \[@fav/text\.escape\]
 </script>
 ```
 
@@ -55,7 +57,7 @@ This function set provides escapings for following syntaxes and formats:
 
 #### <u>escape\['RegExp'\](source) : string</u>
 
-Escape special characters of Regular Expression.
+Escapes special characters of Regular Expression.
 
 The special characters which are escaped are as follows: `^$\.*+?()[]{}|`.
 
@@ -78,7 +80,7 @@ An escaped string.
 
 #### <u>escape\['RegExpCharClass'\](source) : string</u>
 
-Escape special characters of Regular Expression Character Class.
+Escapes special characters of Regular Expression Character Class.
 
 The special characters which are escaped are as follows: `-^]\`.
 
@@ -138,7 +140,7 @@ This program is free software under [MIT][mit-url] License.
 See the file LICENSE in this distribution for more details.
 
 [repo-url]: https://github.com/sttk/fav-text.escape/
-[npm-img]: https://img.shields.io/badge/npm-v0.1.1-blue.svg
+[npm-img]: https://img.shields.io/badge/npm-v1.0.0-blue.svg
 [npm-url]: https://www.npmjs.com/package/@fav/text.escape
 [mit-img]: https://img.shields.io/badge/license-MIT-green.svg
 [mit-url]: https://opensource.org/licenses/MIT

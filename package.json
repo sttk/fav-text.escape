@@ -1,6 +1,6 @@
 {
   "name": "@fav/text.escape",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "Escape characters for various syntaxes and formats.",
   "main": "index.js",
   "files": [

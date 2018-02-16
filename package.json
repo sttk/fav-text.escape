@@ -40,8 +40,8 @@
   },
   "homepage": "https://github.com/sttk/fav-text.escape#readme",
   "devDependencies": {
-    "browserify": "^14.4.0",
-    "coveralls": "^2.13.1",
+    "browserify": "^16.1.0",
+    "coveralls": "^3.0.0",
     "chai": "^3.5.0",
     "eslint": "^4.8.0",
     "mocha": "^3.5.3",

@@ -203,7 +203,7 @@ An escaping function.
 
 ## Checked
 
-### Node.js (4〜10)
+### Node.js (4〜)
 
 | Platform  |   4    |   5    |   6    |   7    |   8    |   9    |   10   |
 |:---------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
@@ -244,7 +244,7 @@ This program is free software under [MIT][mit-url] License.
 See the file LICENSE in this distribution for more details.
 
 [repo-url]: https://github.com/sttk/fav-text.escape/
-[npm-img]: https://img.shields.io/badge/npm-v1.0.1-blue.svg
+[npm-img]: https://img.shields.io/badge/npm-v1.0.2-blue.svg
 [npm-url]: https://www.npmjs.com/package/@fav/text.escape
 [mit-img]: https://img.shields.io/badge/license-MIT-green.svg
 [mit-url]: https://opensource.org/licenses/MIT

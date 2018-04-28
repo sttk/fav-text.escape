@@ -15,7 +15,7 @@ To install from npm:
 $ npm install --save @fav/text.escape
 ```
 
-***NOTE:*** *npm < 2.7.0 does not support scoped package, but even old version Node.js supports it. So when you use such older npm, you should download this package from [github.com][repo-url], and move it in `node_modules/@fav/text.escape/` directory manually.*
+***NOTE:*** *npm < 2.7.0 does not support scoped package, but old version Node.js supports it. So when you use such older npm, you should download this package from [github.com][repo-url], and move it in `node_modules/@fav/text.escape/` directory manually.*
 
 
 ## Usage
@@ -155,7 +155,7 @@ An escaped string.
 
 **Type:** string
 
-#### <u>escape.byPreposition(escapingChar, escapedChars) : function</u>
+#### <u>escape.byPreposition(escapingChar [, ...escapedChars]) : function</u>
 
 Creates an escape function which escapes special characters by preposition of an espacing character, for example:
 
@@ -169,7 +169,7 @@ escape('escaping ", \' and \\.');
 
 | Parameter    |  Type  | Description                                              |
 |--------------|:------:|----------------------------------------------------------|
-| escapingChar | string | The escaping character placed before special characters. |
+| escapingChar | string | The escaping character placed before special characters. This character is escaped, too. |
 | escapedChars | string | The special characters to be escaped.                    |
 
 ##### Return:
@@ -187,6 +187,19 @@ var escape = fav.text.escape.byReplacement({ '"': '&quot;', "'": '&apos;' });
 escape('escaping " and  \'.');
 // => 'escaping &quot; and &apos;.'
 ```
+
+##### Parameter:
+
+| Parameter    |  Type  | Description                                              |
+|--------------|:------:|----------------------------------------------------------|
+| escapingMap  | object | The plain object of which keys and values are mappings of escaped characters and replaced strings.  |
+
+##### Return:
+
+An escaping function.
+
+**Type:** function
+
 
 ## Checked
 
@@ -208,11 +221,11 @@ escape('escaping " and  \'.');
 
 ### Node.js (〜0.12)
 
-| Platform  |  0.7   |  0.8   |  0.9   |  0.10  |  0.11  |  0.12  |
-|:---------:|:------:|:------:|:------:|:------:|:------:|:------:|
-| macOS     |        |&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|
-| Windows10 |        |&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|
-| Linux     |&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|
+| Platform  |  0.8   |  0.9   |  0.10  |  0.11  |  0.12  |
+|:---------:|:------:|:------:|:------:|:------:|:------:|
+| macOS     |&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|
+| Windows10 |&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|
+| Linux     |&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|
 
 ### Web browsers
 

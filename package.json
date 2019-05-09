@@ -13,9 +13,8 @@
     "test": "mocha",
     "coverage": "nyc --reporter=lcov --reporter=text-summary npm test",
     "coveralls": "nyc --reporter=text-lcov npm test | coveralls",
-    "web:build": "npm run web:build-src && npm run web:build-test",
-    "web:build-src": "browserify index.js --standalone fav.text.escape -o web/fav.text.escape.js && cd web && uglifyjs fav.text.escape.js --compress --mangle -o fav.text.escape.min.js --source-map url=fav.text.escape.min.js.map",
-    "web:build-test": "node tool/mktest.js",
+    "web:build": "browserify index.js --standalone fav.text.escape -o web/fav.text.escape.js && cd web && uglifyjs fav.text.escape.js --compress --mangle -o fav.text.escape.min.js --source-map url=\"'fav.text.escape.min.js.map'\" && cd .. && node tool/make-web-test.js",
+    "web:test": "node tool/open-web-test.js",
     "chrome:install": "npm i --no-save mocha-chrome",
     "chrome:test": "mocha-chrome test/web/browser-test.html",
     "build": "npm run lint && npm run coverage && npm run web:build"

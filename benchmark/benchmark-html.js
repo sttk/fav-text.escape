@@ -21,5 +21,6 @@ new BenchmarkTester()
   .verifyTest('escape-html', inputted, expected)
   .runTest('No special characters', 'Hello,World!')
   .runTest('Single special characters', inputted)
+  .runTest('A few special characters', 'Foo_Bar_<foo.bar@mail.com>')
   .runTest('Many special characters', '\'>\'""&>h<e>&<y>')
   .print();

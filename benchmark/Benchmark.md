@@ -1,5 +1,42 @@
 # Benchmark of @fav/text.escape
 
+## v1.0.4
+
+### RegExp
+
+Comparing with following modules:
+
+- [lodash.escapeRegExp](https://www.npmjs.com/package/lodash)
+- [escape-string-regexp](https://www.npmjs.com/package/escape-string-regexp)
+- [regexp.escape](https://www.npmjs.com/package/regexp.escape)
+- [escape-regexp](https://www.npmjs.com/package/escape-regexp)
+
+|                         | @fav/text.escape(1.0.4) | lodash(4.17.11)    | escape-string-regexp(2.0.0) | regexp.escape(1.0.2) | escape-regexp(0.0.1) |
+|:------------------------|------------------------:|-------------------:|----------------------------:|---------------------:|---------------------:|
+| No special characters   |       2,231,794 ops/sec | 23,117,094 ops/sec |           2,224,370 ops/sec |    2,277,164 ops/sec |    1,615,208 ops/sec |
+| Many special characters |         901,855 ops/sec |    857,647 ops/sec |           1,037,310 ops/sec |      915,957 ops/sec |      756,432 ops/sec |
+
+- Platform: Node.js 12.2.0 on Darwin 64-bit
+- Machine: Intel(R) Core(TM) i7-2620M CPU @ 2.70GHz, 16GB
+
+### HTML
+
+Comparing with following modules:
+
+- [lodash.escape](https://www.npmjs.com/package/lodash)
+- [escape-html](https://www.npmjs.com/package/escape-html)
+
+|                           | @fav/text.escape(1.0.4) | lodash(4.17.11)    | escape-html(1.0.3) |
+|:--------------------------|------------------------:|-------------------:|-------------------:|
+| No special characters     |      21,464,961 ops/sec | 22,533,968 ops/sec | 19,781,193 ops/sec |
+| Single special characters |       3,060,584 ops/sec |  1,750,130 ops/sec |  5,399,406 ops/sec |
+| A few special characters  |       1,471,390 ops/sec |  1,480,854 ops/sec |  3,908,194 ops/sec |
+| Many special characters   |       1,465,911 ops/sec |    601,136 ops/sec |  3,000,612 ops/sec |
+
+- Platform: Node.js 12.2.0 on Darwin 64-bit
+- Machine: Intel(R) Core(TM) i7-2620M CPU @ 2.70GHz, 16GB
+
+
 ## v1.0.3
 
 ### RegExp

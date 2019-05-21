@@ -115,8 +115,10 @@ The escape mapping for HTML entity is as follows:
 | `'<'` (\u003c)    | `'&lt;'`      |
 | `'>'` (\u003e)    | `'&gt;'`      |
 | `'&'` (\u0026)    | `'&amp;'`     |
-| `' '` (\u0020)    | `'&nbsp;'`    |
-| `'\n'` (\u000a)   | `'<br/>'`     |
+| ~~`' '` (\u0020)~~    | ~~`'&nbsp;'`~~    |
+| ~~`'\n'` (\u000a)~~   | ~~`'<br/>'`~~     |
+
+*NOTE: To reserve multiple spaces(\u0020) and EOL(`\n`), should use CSS's `white-space: pre-wrap`.*
 
 ##### Parameter:
 

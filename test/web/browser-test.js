@@ -136,10 +136,10 @@ describe('fav.text.escape["HtmlEntity"]', function() {
     expect(escape('<')).to.equal('&lt;');
     expect(escape('>')).to.equal('&gt;');
     expect(escape('&')).to.equal('&amp;');
-    expect(escape(' ')).to.equal('&nbsp;');
-    expect(escape('\n')).to.equal('<br/>');
+    expect(escape(' ')).to.equal(' ');
+    expect(escape('\n')).to.equal('\n');
 
-    expect(escape('<>& \n')).to.equal('&lt;&gt;&amp;&nbsp;<br/>');
+    expect(escape('<>& \n')).to.equal('&lt;&gt;&amp; \n');
   });
 
   it('Should not escape other characters', function() {
@@ -149,7 +149,7 @@ describe('fav.text.escape["HtmlEntity"]', function() {
 
   it('Should escape only special characters in a string', function() {
     expect(escape('<span>Apple  & "orange".</span>')).to.equal(
-      '&lt;span&gt;Apple&nbsp;&nbsp;&amp;&nbsp;"orange".&lt;/span&gt;');
+      '&lt;span&gt;Apple  &amp; "orange".&lt;/span&gt;');
   });
 
   it('Should not error when an argument is empty', function() {

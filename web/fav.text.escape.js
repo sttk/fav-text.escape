@@ -91,8 +91,6 @@ module.exports = create({
   '<': '&lt;',
   '>': '&gt;',
   '&': '&amp;',
-  ' ': '&nbsp;',
-  '\n': '<br/>',
 });
 
 },{"./create/by-replacement":3}],6:[function(require,module,exports){

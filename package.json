@@ -37,20 +37,12 @@
   },
   "homepage": "https://github.com/sttk/fav-text.escape#readme",
   "devDependencies": {
-    "benchmark": "^2.1.4",
-    "benchmark-tester": "^0.3.0",
     "browserify": "^16.1.0",
     "chai": "^3.5.0",
     "coveralls": "^3.0.0",
-    "escape-html": "^1.0.3",
-    "escape-regexp": "0.0.1",
-    "escape-string-regexp": "^2.0.0",
     "eslint": "^5.16.0",
-    "lodash": "^4.17.11",
     "mocha": "^3.5.3",
     "nyc": "^14.1.0",
-    "platform": "^1.3.5",
-    "regexp.escape": "^1.0.2",
     "uglify-js": "^3.1.3"
   }
 }
